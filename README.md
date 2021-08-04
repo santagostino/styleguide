@@ -99,7 +99,15 @@ I comandi che troverete saranno:
 - `make check-env-file`:  verifica la presenza del env file
 
 #### La docs
-@TODO
+La documentazione (se si parte dagli starterkit) verrà deployata in automatico, **si dovrà solo scriverla, perchè non partira dai commenti nel codice**
+
+Verrà deployata su backstage in modo tale che sarà disponibile nel catalogo servizi.
+
+La docs usa anche [PLANTUML](https://plantuml.com/) un ottimo plugin per fare grafici in markdown e utile per avere una documentaizone più strututrata e di facile lettura.
+
+**Come creare una nuova pagina nelal docs?**
+1. Editare il file `mkdocs.yml` aggiungendo la voce di menu desiderata e il path del file MD desiderato
+2. Creare ed editare il fiel di pagina in `/docs/`
 
 ## Come scrivere una issue
 @TODO
