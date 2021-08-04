@@ -81,8 +81,23 @@ Uno starterkit è la base di sviluppo che già fornisce alcune funzionalità per
 - configurazione dei test
 - configurazione e docs sul sistema di log
 - docs per l'utilizzo
+
 #### Il makefile
-@TODO
+Questo file contiene una serie di script che possono essere utilizati per alcune operazioni.
+
+Aiuta a creare "alias" di comandi.
+
+I comandi che troverete saranno:
+- `make all`: eseguirà una serire di comandi per inizializzare il progetto
+- `make up`: accende i docker per il progetto
+- `make cli`: attiva la shell del container docker
+- `make logs`: essendo in docker attivati in detaxch mode questo comando attiva il tail sui logs
+- `make unit-test`: lancia la suite di test
+- `make lint`: lancia il lint
+- `make stage-deploy`: istnaza le librerie necessari per lo sviluppo
+- `make build`: istanzia i docker necessari
+- `make check-env-file`:  verifica la presenza del env file
+
 #### La docs
 @TODO
 
