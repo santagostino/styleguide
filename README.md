@@ -39,6 +39,7 @@ Da Backstage è possibile "istanziare" un nuovo servizio partendo dallo starterk
 2. Scegliere lo starterkit desiderato
 3. compilare gli step di creazione
 4. Lanciare lo script di creazione/deploy
+
 ### Flusso d'inizio
 1. Clonare il repository che è stato "istanziato" da backstage
 2. fare il **checkout** del **branch di stage**
@@ -54,14 +55,17 @@ Usare il comando `make all`
 Usare il comando `make unit-test`
 4. pusshare in remote il branch (anche per un backup)
 5. Per chiudere il progetto (se si deve passare ad un'altro) usare `make stop` per stoppare il docker
+   
 ### Flusso deploy in stage
 1. Aggiornare la docs
 2. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
 3. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
+
 ### Flusso deploy in master
-1. Aggiornare la docs
-2. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
-3. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
+4. Aggiornare la docs
+5. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
+6. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
+
 ### Gli starterkit
 Abbiamo creato alcuni starterkit che coprono una buona parte delle possibilità di servizi che possiamo creare.
 
