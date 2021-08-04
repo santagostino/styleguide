@@ -110,7 +110,14 @@ La docs usa anche [PLANTUML](https://plantuml.com/) un ottimo plugin per fare gr
 2. Creare ed editare il fiel di pagina in `/docs/`
 
 ## Come scrivere una issue
-@TODO
+Una issue di bug/sviluppo è molto impostante perchè ci aiuta ad avere riferimento alla funzionalità sviluppata e avere una descrizione dettagliata del lavoro da fare/fatto.
+
+Una Issue dovrebbe contenere:
+- **Titolo** che ci aiuti a capire cosa c'è da fare
+- **Descrizione** del lavoro da fare
+- **CheckList/List subtask** dei task da fare, verrà man mano aggiornata per flaggare i task fatti, cosi da aiutarci nel capire lo stato avanzamento
+- **DoD** che mi idenfica cosa mi aspetto dalal funzionalità per capire se il lavoro è concluso o meno (da scrivere prima di iniziare a svluppuare)
+- **Lista delle pullrequest** associate (verrà aggiornato a mano ad ogni PR, per tenere uno storico)
 ## Strumenti consigliati
 Alcuni strumenti che consigliamo per gestire al meglio un progetto
 - **ClickUP**: piattaforma per gestire TASK sfruttando le potenzialità di TRELLO e delle metodologie Kanban, Scrum
