@@ -123,6 +123,7 @@ Si è scelto di utilizzare le secrets di GitHub per conservare questi dati e pas
 
 **Best practice**
 - se la secrets sarà usata da più servizi allora è bene metterla a livello di organizzazione
+- 
 ## Come scrivere una issue
 Una issue di bug/sviluppo è molto impostante perchè ci aiuta ad avere riferimento alla funzionalità sviluppata e avere una descrizione dettagliata del lavoro da fare/fatto.
 
