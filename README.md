@@ -66,7 +66,7 @@ Usare il comando `make unit-test`
 5. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
 6. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
 
-### Gli starterkit
+## Gli starterkit
 Abbiamo creato alcuni starterkit che coprono una buona parte delle possibilità di servizi che possiamo creare.
 
 Uno starterkit è la base di sviluppo che già fornisce alcune funzionalità per aiutare il programmatore e per farlo concentrare sulla business logic, accellerando i tempi di sviluppo (non deve gestire, se non in casi particolari, il deploy e la configurazione del progetto).
@@ -82,7 +82,7 @@ Uno starterkit è la base di sviluppo che già fornisce alcune funzionalità per
 - configurazione e docs sul sistema di log
 - docs per l'utilizzo
 
-#### Il makefile
+### Il makefile
 Questo file contiene una serie di script che possono essere utilizati per alcune operazioni.
 
 Aiuta a creare "alias" di comandi.
@@ -98,7 +98,7 @@ I comandi che troverete saranno:
 - `make build`: istanzia i docker necessari
 - `make check-env-file`:  verifica la presenza del env file
 
-#### La docs
+### La docs
 La documentazione (se si parte dagli starterkit) verrà deployata in automatico, **si dovrà solo scriverla, perchè non partira dai commenti nel codice**
 
 Verrà deployata su backstage in modo tale che sarà disponibile nel catalogo servizi.
@@ -109,6 +109,20 @@ La docs usa anche [PLANTUML](https://plantuml.com/) un ottimo plugin per fare gr
 1. Editare il file `mkdocs.yml` aggiungendo la voce di menu desiderata e il path del file MD desiderato
 2. Creare ed editare il fiel di pagina in `/docs/`
 
+## Come utilizzare i dati sensibili (dati di login, chiavi di crypt)
+I dati per accedere ai servizi (database, token API, chiavi JWT) sono dati molto sensibili, e averli in chiaro su un repository, potrebbero minarne la sicurezza.
+
+Si è scelto di utilizzare le secrets di GitHub per conservare questi dati e passarli sempre come variabili nei workflow e negli ambienti di stage/prod
+
+**Come utilizzarli**
+- localmente 
+  - creare pure un file `.env`
+  - toglierlo dal GIT (usando gitignore)
+- deploy in stage/prod
+  - andare su GitHub e a livello di progetto o di organizzazione settare una secrets apposita (Settings > Secrets)
+
+**Best practice**
+- se la secrets sarà usata da più servizi allora è bene metterla a livello di organizzazione
 ## Come scrivere una issue
 Una issue di bug/sviluppo è molto impostante perchè ci aiuta ad avere riferimento alla funzionalità sviluppata e avere una descrizione dettagliata del lavoro da fare/fatto.
 
