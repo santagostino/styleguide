@@ -19,7 +19,12 @@ Consigliamo l'utilizzo delle **PullRequest** per strutturare meglio i rilasci e 
 
 Consigliamo l'utilizzo dei test per migliorare la stabilità del codice per quelle parti **"critiche"** del codice.
 
+**Alcune note sulle PR**
 
+- tutte le PR (feature branch > stage / stage >master) devono usare l'opzione di github "create a merge commit" quando vengono approvate
+- se i feature branch contengono più di un commit si può selezionare l'opzione **squash and merge**
+- per le PR stage -> master non si deve mai usare l'opzione "squash and merge"
+  
 **Indicazioni di stile**
 
 - Per ogni lavoro creiamo un branch (**non lavoriamo sui branch master e stage!**) usando questa sintassi `<feature|bug|fixed|>/[<numero_issue>_]<nome_branch>` 
@@ -60,11 +65,13 @@ Usare il comando `make unit-test`
 1. Aggiornare la docs
 2. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
 3. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
+4. Alla chiusura della PR fare sempre **create a merge commit" *(questo permette a github di non mostrare delle diff sbagliate)*
 
 ### Flusso deploy in master
 4. Aggiornare la docs
 5. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
 6. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
+7. Alla chiusura della PR fare sempre **create a merge commit" *(questo permette a github di non mostrare delle diff sbagliate)*
 
 ## Gli starterkit
 Abbiamo creato alcuni starterkit che coprono una buona parte delle possibilità di servizi che possiamo creare.
@@ -99,6 +106,8 @@ I comandi che troverete saranno:
 - `make check-env-file`:  verifica la presenza del env file
 
 ### La docs
+#### Docs geenrica
+
 La documentazione (se si parte dagli starterkit) verrà deployata in automatico, **si dovrà solo scriverla, perchè non partira dai commenti nel codice**
 
 Verrà deployata su backstage in modo tale che sarà disponibile nel catalogo servizi.
@@ -109,6 +118,17 @@ La docs usa anche [PLANTUML](https://plantuml.com/) un ottimo plugin per fare gr
 1. Editare il file `mkdocs.yml` aggiungendo la voce di menu desiderata e il path del file MD desiderato
 2. Creare ed editare il fiel di pagina in `/docs/`
 
+#### Docs swagger per le API
+
+Se il servizio avrà delle API che potranno essere consumate all'esterno, **è bene** predisporre anche il file swagger per la documentazione delle API.
+
+Anche questo file verrà letto e gestito da backstage per la generazione della documentazione, nell'apposita sezione API.
+
+**Come creare la documentazione per le api?**
+1. creare la cartella `api-docs` nella folder principale del progetto.
+2. creare il file `<nome-servizio>_api.yml`
+3. usare come template questo file [swagger backstage template](https://github.com/santagostino/styleguide/blob/master/swagger-template.yml)
+4. inserire nella parte `definition` lo swagger del servizio
 ## Come utilizzare i dati sensibili (dati di login, chiavi di crypt)
 I dati per accedere ai servizi (database, token API, chiavi JWT) sono dati molto sensibili, e averli in chiaro su un repository, potrebbero minarne la sicurezza.
 
