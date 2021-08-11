@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sms-proxy-api
+  description: API per la gestione e l'invio di SMS
+  tags:
+    - sms
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: santagostino
+  definition: |
+  <Inserie_swagger>
