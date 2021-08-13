@@ -132,7 +132,19 @@ Anche questo file verrà letto e gestito da backstage per la generazione della d
 ## Come utilizzare i dati sensibili (dati di login, chiavi di crypt)
 I dati per accedere ai servizi (database, token API, chiavi JWT) sono dati molto sensibili, e averli in chiaro su un repository, potrebbero minarne la sicurezza.
 
-Si è scelto di utilizzare le secrets di GitHub per conservare questi dati e passarli sempre come variabili nei workflow e negli ambienti di stage/prod
+Si è scelto di utilizzare le secrets di GitHub per conservare questi dati e passarli sempre come variabili nei workflow e negli ambienti di stage/prod.
+
+L'organizzazione ha già molte chiavi di default che possono essere utilizzate, in più ogni repository può avere le sue personali.
+
+### Come utilizzarle?
+
+**Localmente** : Utilizzare il file .env (nel repository è commentato e deve essere creato come il file `.env.template`)
+
+**Per ambienti di stage e prod**
+
+- riportare le variabili su `docker-compose.yml`
+- riportare le variabili sulle gitHub actions `prod.yml` `stage.yml` nella sezione *env*
+
 
 **Come utilizzarli**
 - localmente 
