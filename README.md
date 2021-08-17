@@ -175,9 +175,3 @@ Ci permette anche di essere cross-platform a costo zero
 - **DBeaver**: piattaforma open-source per collegarsi a moltissimi tipi di database
 - **Postman**: client per REST API
 - **Miro**: per la creazione di schemi e mappe concettuali collaborative
-
-
-```plantuml format="png" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram" width="300px" height="300px"
-  Goofy ->  MickeyMouse: calls
-  Goofy <-- MickeyMouse: responds
-```
