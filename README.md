@@ -175,3 +175,18 @@ Ci permette anche di essere cross-platform a costo zero
 - **DBeaver**: piattaforma open-source per collegarsi a moltissimi tipi di database
 - **Postman**: client per REST API
 - **Miro**: per la creazione di schemi e mappe concettuali collaborative
+
+
+@startuml
+title Authentication Sequence
+    Alice->Bob: Authentication Request
+    note right of Bob: Bob thinks about it
+    Bob->Alice: Authentication Response
+@enduml
+
+
+```plantuml source="basic.puml"
+    '' This code is appended to the contents of basic.puml
+    Goofy ->  MickeyMouse: calls
+    Goofy <-- MickeyMouse: responds
+```
