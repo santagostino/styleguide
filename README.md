@@ -1,4 +1,4 @@
-# Style guide Santagostino DevOps
+# Style guide Santagostino DevOps for Developer Platform
 
 L'obiettivo è dare alcune indicazioni su come poter lavorare con la nuova Developer platform di Santagostino.
 
@@ -105,8 +105,12 @@ I comandi che troverete saranno:
 - `make build`: istanzia i docker necessari
 - `make check-env-file`:  verifica la presenza del env file
 
+### Installare dipendenze/plugin/moduli
+Indipendentemente dal linguaggio (JS o PHP), per instalalre delel dipendenze, dovete sempre entrare nei container e da li lanciare i comandi.
+In questo modo non si crea incongruenza con i lockfile dei gestori di pacchetti e non darà errore in prod o stage.
+
 ### La docs
-#### Docs geenrica
+#### Docs generica
 
 La documentazione (se si parte dagli starterkit) verrà deployata in automatico, **si dovrà solo scriverla, perchè non partira dai commenti nel codice**
 
