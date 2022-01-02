@@ -179,3 +179,6 @@ Ci permette anche di essere cross-platform a costo zero
 - **DBeaver**: piattaforma open-source per collegarsi a moltissimi tipi di database
 - **Postman**: client per REST API
 - **Miro**: per la creazione di schemi e mappe concettuali collaborative
+
+## Link Utili
+- 12 Factor app: https://12factor.net/it/
