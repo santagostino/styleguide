@@ -180,5 +180,56 @@ Ci permette anche di essere cross-platform a costo zero
 - **Postman**: client per REST API
 - **Miro**: per la creazione di schemi e mappe concettuali collaborative
 
+### Plugin di VSCode
+- [Auto close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+- [Auto complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
+- [Auto rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+- [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring)
+- [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+- [Beautify blade](https://marketplace.visualstudio.com/items?itemName=apility.beautify-blade)
+- [Better comment](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [Code spell check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [Italian code spell check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-italian)
+- [Color picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color)
+- [CSS peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
+- [DOT Env](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+- [Editor config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [GIT Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [GIT History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [GIT Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens-insiders)
+- [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+- [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [Local history](https://marketplace.visualstudio.com/items?itemName=xyz.local-history)
+- [Markdown all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Markdown Preview](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+- [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+- [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+- [PHP cs fixer](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer)
+- [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
+- [PHP Extension pack](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-pack)
+- [PHP Formatter](https://marketplace.visualstudio.com/items?itemName=Sophisticode.php-formatter)
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- [PHP Namespace resolver](https://marketplace.visualstudio.com/items?itemName=MehediDracula.php-namespace-resolver)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+- [Thunder client (es postman)](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+- [SFTP](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp)
+- [Terminal](https://marketplace.visualstudio.com/items?itemName=formulahendry.terminal)
+- [Settings sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+- [TODO highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+- [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
+
+
+### Temi e icone e varie
+- [Material icon theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- [Darcula Theme](https://marketplace.visualstudio.com/items?itemName=rokoroku.vscode-theme-darcula)
+- [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+- [PDF](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
+- [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
+
+
+
 ## Link Utili
 - [12 Factor app](https://12factor.net/it/)
