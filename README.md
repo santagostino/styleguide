@@ -1,4 +1,4 @@
-# Style guide Santagostino DevOps for Developer Platform
+# Style guide Santagostino DevOps
 
 L'obiettivo è dare alcune indicazioni su come poter lavorare con la nuova Developer platform di Santagostino.
 
