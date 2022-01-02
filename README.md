@@ -180,7 +180,9 @@ Ci permette anche di essere cross-platform a costo zero
 - **Postman**: client per REST API
 - **Miro**: per la creazione di schemi e mappe concettuali collaborative
 
-### Plugin di VSCode
+## Plugin di VSCode
+
+### Code
 - [Auto close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag)
 - [Auto rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
@@ -221,15 +223,12 @@ Ci permette anche di essere cross-platform a costo zero
 - [TODO highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
 
-
 ### Temi e icone e varie
 - [Material icon theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [Darcula Theme](https://marketplace.visualstudio.com/items?itemName=rokoroku.vscode-theme-darcula)
 - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 - [PDF](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
 - [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
-
-
 
 ## Link Utili
 - [12 Factor app](https://12factor.net/it/)
