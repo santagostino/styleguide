@@ -169,7 +169,14 @@ Una Issue dovrebbe contenere:
 - **CheckList/List subtask** dei task da fare, verrà man mano aggiornata per flaggare i task fatti, cosi da aiutarci nel capire lo stato avanzamento
 - **DoD** che mi idenfica cosa mi aspetto dalal funzionalità per capire se il lavoro è concluso o meno (da scrivere prima di iniziare a svluppuare)
 - **Lista delle pullrequest** associate (verrà aggiornato a mano ad ogni PR, per tenere uno storico)
-  
+
+## Come gestire test sulle chiamate API
+Consigliamo di utilizzar eil plugin di VSCode [REST API](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) perchè permette di avere dei file testuali all'interno del git (opportunamente formattati) per fare chiamate REST.
+
+Il vantaggio sarà quello di condividere tramite GIT le nostre chiamate e di averne alcune di test utili per debug.
+
+**NOTA**: utilizzare estensione .http per avere identazione, colorazione e autocompletamento
+
 ## Strumenti consigliati
 Alcuni strumenti che consigliamo per gestire al meglio un progetto
 - **ClickUP**: piattaforma per gestire TASK sfruttando le potenzialità di TRELLO e delle metodologie Kanban, Scrum
