@@ -27,11 +27,11 @@ Consigliamo l'utilizzo dei test per migliorare la stabilità del codice per quel
   
 **Indicazioni di stile**
 
-- Per ogni lavoro creiamo un branch (**non lavoriamo sui branch master e stage!**) usando questa sintassi `<feature|bug|fixed|>/[<numero_issue>_]<nome_branch>` 
+- Per ogni lavoro creiamo un branch (**non lavoriamo sui branch master e stage!**) usando questa sintassi `<feature|bug|fixed|>/[<numero_card>_]<nome_branch>` 
 (*esempio `feature/42_scopo_della_vita`*)
-- Ogni pull request dovrà contenere un eventuale riferimento alla issue e il titolo della stessa. 
-Utilizzare questa sintassi `[ref #<numero_issue> :] <titolo>`
-- Ogni commit di sviluppo dovrebbe contenere il riferimento per la issue di sviluppo
+- Ogni pull request dovrà contenere un eventuale riferimento alla card e il titolo della stessa. 
+Utilizzare questa sintassi `[ref #<numero_card> :] <titolo>`
+- Ogni commit di sviluppo dovrebbe contenere il riferimento per la card di sviluppo
 
 
 ## Workflows di lavoro
@@ -42,12 +42,12 @@ Da Backstage è possibile "istanziare" un nuovo servizio partendo dallo starterk
 ### Flusso per istanziare un nuovo servizio
 1. Entrare su backstage
 2. Scegliere lo starterkit desiderato
-3. compilare gli step di creazione
+3. Compilare gli step di creazione
 4. Lanciare lo script di creazione/deploy
 
 ### Flusso d'inizio
 1. Clonare il repository che è stato "istanziato" da backstage
-2. fare il **checkout** del **branch di stage**
+2. Fare il **checkout** del **branch di stage** `git checkout stage`
 3. Aggiungere il file .env (c'è un file d'esempio nel repository) popolandolo con i dati necessari (API key ecc..) 
 4. Lanciare la build per istanziare tutti i servizi del repository.
 Usare il comando `make all`
@@ -55,11 +55,13 @@ Usare il comando `make all`
 
 ### Flusso di sviluppo
 1. Se non esiste ancora create il branch di sviluppo *(usare le linee guida descritte sopra)*
-2. Sviluppare e fare i commit con un messaggio sempre riferito alla issue (se essite)
+2. Sviluppare e fare i commit con un messaggio sempre riferito alla card (se esiste)
 3. Prima di un commit è bene lanciare i test per la verifica del codice.
-Usare il comando `make unit-test`
-4. pusshare in remote il branch (anche per un backup)
-5. Per chiudere il progetto (se si deve passare ad un'altro) usare `make stop` per stoppare il docker
+Usare il comando `make unit-test` oppure entrare nel container `make cli`e da li lanciare `yarn test`
+4. Pusshare in remote il branch (*anche per un backup*)
+5. Per chiudere il progetto (*se si deve passare ad un'altro*) usare `make stop` oppure `docker-compose stop` per stoppare il docker
+
+**NOTA**: usare `docker-compose start` per attivare i container del progetto già inizializzati e buildati.
    
 ### Flusso deploy in stage
 1. Aggiornare la docs
@@ -157,25 +159,18 @@ L'organizzazione ha già molte chiavi di default che possono essere utilizzate, 
 - deploy in stage/prod
   - andare su GitHub e a livello di progetto o di organizzazione settare una secrets apposita (Settings > Secrets)
 
-**Best practice**
-- se la secrets sarà usata da più servizi allora è bene metterla a livello di organizzazione
-- 
-## Come scrivere una issue
-Una issue di bug/sviluppo è molto impostante perchè ci aiuta ad avere riferimento alla funzionalità sviluppata e avere una descrizione dettagliata del lavoro da fare/fatto.
+**Best practice #1**: se la secrets sarà usata da più servizi allora è bene metterla a livello di organizzazione.
 
-Una Issue dovrebbe contenere:
-- **Titolo** che ci aiuti a capire cosa c'è da fare
-- **Descrizione** del lavoro da fare
-- **CheckList/List subtask** dei task da fare, verrà man mano aggiornata per flaggare i task fatti, cosi da aiutarci nel capire lo stato avanzamento
-- **DoD** che mi idenfica cosa mi aspetto dalal funzionalità per capire se il lavoro è concluso o meno (da scrivere prima di iniziare a svluppuare)
-- **Lista delle pullrequest** associate (verrà aggiornato a mano ad ogni PR, per tenere uno storico)
+**Best practice #2**: per uniformare l'utilizzo delle secrets è bene utilizzare nomi generali sul progetto (senz aindicare ambinete di STAGE o PROD) cosi che solo nei workflow si vanno a settare le secrets corrette per i vari ambienti su cui si sta facendo il deploy.
 
 ## Come gestire test sulle chiamate API
-Consigliamo di utilizzar eil plugin di VSCode [REST API](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) perchè permette di avere dei file testuali all'interno del git (opportunamente formattati) per fare chiamate REST.
+Consigliamo di utilizzare il plugin di VSCode [REST API](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) perchè permette di avere dei file testuali all'interno del git (opportunamente formattati) per fare chiamate REST.
 
 Il vantaggio sarà quello di condividere tramite GIT le nostre chiamate e di averne alcune di test utili per debug.
 
-**NOTA**: utilizzare estensione .http per avere identazione, colorazione e autocompletamento
+**NOTA #1**: utilizzare estensione .http per avere identazione, colorazione e autocompletamento
+
+**NOTA #2**: se le nostre API da testare utilizzano delle APIKEY sfruttare i file .env per inserire la chiave cosi rimarrà locale e non sarà pushata su git.
 
 ## Strumenti consigliati
 Alcuni strumenti che consigliamo per gestire al meglio un progetto
