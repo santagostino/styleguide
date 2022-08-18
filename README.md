@@ -135,6 +135,8 @@ Anche questo file verrà letto e gestito da backstage per la generazione della d
 2. creare il file `<nome-servizio>_api.yml`
 3. usare come template questo file [swagger backstage template](https://github.com/santagostino/styleguide/blob/master/swagger-template.yml)
 4. inserire nella parte `definition` lo swagger del servizio
+
+
 ## Come utilizzare i dati sensibili (dati di login, chiavi di crypt)
 I dati per accedere ai servizi (database, token API, chiavi JWT) sono dati molto sensibili, e averli in chiaro su un repository, potrebbero minarne la sicurezza.
 
