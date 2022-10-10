@@ -33,6 +33,57 @@ Consigliamo l'utilizzo dei test per migliorare la stabilità del codice per quel
 Utilizzare questa sintassi `[ref #<numero_card> :] <titolo>`
 - Ogni commit di sviluppo dovrebbe contenere il riferimento per la card di sviluppo
 
+## Dotenv-Vault e Condivisione Envfiles
+
+Dotenv-vault è lo strumento che utilizziamo per la condivisione e il monitoraggio degli envfile.
+Gli envfile sono spesso necessari nella fase di start di un progetto e provvedono a fornire i valori per le variabili d'ambiente relative al progetto stesso. Tuttavia gli envfile contengono spesso dati sensibili ed è quindi necessario aggiungere un layer di sicurezza alla condivisone di tali informazioni.
+
+**Perchè l'abbiamo scelto?**
+
+- Ci aiuta a garantire gli standard di sicurezza ad un costo operativo minimo.
+- Facilita il lavoro di team, è difatti possibile gestire gli accessi ai singoli "spazi di lavoro", detti "Vault", tramite Dotenv-vault
+
+Nel suo ciclo di vita un Vault deve essere inizializzato una sola volta(Idealmente in fase di inizializzazione del progetto) e aggiornato ogni qualvolta gli envfiles subiscano dei cambiamenti.
+Vediamo di seguito come è possibile effettuare il primo setup ed utilizzarlo.
+
+### Installazione
+
+Se non è ancora stato installato, il primo comando di dotenv-vault su npx lo installerà per noi.
+
+### Inizializzazione di un Vault
+
+Per inizializzare un vault è necessario aprire la command line e digitare:
+`npx dotenv-vault new`
+
+Questo ci permette di configurare il vault per la prima volta e genera 2 file:
+
+- **.env.me**, è un file di identificazione utente, non deve essere mai tracciato all'interno delle repository
+- **.env.vault**, è un file che indica su quale vault si opera, va tracciato nei cambiamenti della repository.
+
+### Sincronizzare gli Envfiles
+
+Una volta inizializzato il vault è possibile effettuare l'update delle proprietà dell'envfile e/o recuperare la versione più recente dell'envfile.
+Da riga di comando: 
+- `make pull-dotenv` esegue lo storage delle modifiche dell'envfile
+- `make push-dotenv` recupera la versione piu' recente dell'envfile dal vault
+
+N.B: `make pull-dotenv` e `make push-dotenv` sono rispettivamente i wrapper dei comandi `npx dotenv-vault pull` e `npx dotenv-vault push`. Tuttavia per coerenza con gli standard è preferibile utilizzare i wrapper.
+
+### Login
+
+Per compiere le azioni **pull** e **push** è necessario essere autenticati.
+Qualora ci fosse bisogno di autenticarsi è sufficiente digitare da riga di comando:
+`npx dotenv-vault login`
+
+Si aprirà una scheda del browser dove è possibile effettuare la login.
+
+### Gestione accessi ed ispezione del vault
+
+E' possibile gestire gli accessi al vault e controllarne i contenuti.
+Da riga di comando è sufficiente digitare:
+`npx dotenv-vault open`
+
+Si aprirà una scheda del browser dove è possibile controllare il nostro vault.
 
 ## Workflows di lavoro
 Di seguito disegnamo un flusso di sviluppo che è stato implmentato in tutti gli starterkit e che consigliamo anche per progetti che non partono dagli starterkit.
