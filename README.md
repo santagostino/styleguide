@@ -64,8 +64,10 @@ Questo ci permette di configurare il vault per la prima volta e genera 2 file:
 
 Una volta inizializzato il vault è possibile effettuare l'update delle proprietà dell'envfile e/o recuperare la versione più recente dell'envfile.
 Da riga di comando: 
-- `npx dotenv-vault push` esegue lo storage delle modifiche dell'envfile
-- `npx dotenv-vault pull` recupera la versione piu' recente dell'envfile dal vault
+- `make pull-dotenv` esegue lo storage delle modifiche dell'envfile
+- `make push-dotenv` recupera la versione piu' recente dell'envfile dal vault
+
+N.B: `make pull-dotenv` e `make push-dotenv` sono rispettivamente i wrapper dei comandi `npx dotenv-vault pull` e `npx dotenv-vault push`. Tuttavia per coerenza con gli standard è preferibile utilizzare i wrapper.
 
 ### Login
 
