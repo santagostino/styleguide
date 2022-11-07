@@ -2,7 +2,7 @@
 
 L'obiettivo è dare alcune indicazioni su come poter lavorare con la nuova Developer platform di Santagostino.
 
-Daremo delel linee guida su:
+Daremo delle linee guida su:
 - flusso di lavoro
 - scrittura di commit e documentazione
 
@@ -125,6 +125,8 @@ Usare il comando `make unit-test` oppure entrare nel container `make cli`e da li
 5. **NON** fare mai il merge su stage, creare una pullrequest indicando un reviewer tra quelli del team
 6. Tenere d'occhio la review per modifiche sul codice o altre segnalazioni
 7. Alla chiusura della PR fare sempre **create a merge commit" *(questo permette a github di non mostrare delle diff sbagliate)*
+
+**NON DIMENTICARE MAI DI FARE GLI UNIT-TEST DEL TUO CODICE, AIUTERANNO LA MANTENIBILITA' E LA COOPERAZIONE TRA I DEV!!!**
 
 ## Gli starterkit
 Abbiamo creato alcuni starterkit che coprono una buona parte delle possibilità di servizi che possiamo creare.
