@@ -98,19 +98,14 @@ Da Backstage è possibile "istanziare" un nuovo servizio partendo dallo starterk
 
 ### Flusso d'inizio
 1. Clonare il repository che è stato "istanziato" da backstage
-2. Fare il **checkout** del **branch di stage** `git checkout stage`
-3. Aggiungere il file .env (c'è un file d'esempio nel repository) popolandolo con i dati necessari (API key ecc..) 
-4. Lanciare la build per istanziare tutti i servizi del repository.
-Usare il comando `make all`
-5. Creare branch per lo sviluppo *(usare le linee guida descritte sopra)*
+2. Lanciare il comando `make init`
+3. Creare branch con il comando `make create-branch-feature BRANCH=<nome-brnach>` o `make create-branch-fix BRANCH=<nome-brnach>` per lo sviluppo *(usare le linee guida descritte sopra)*
 
 ### Flusso di sviluppo
 1. Se non esiste ancora create il branch di sviluppo *(usare le linee guida descritte sopra)*
 2. Sviluppare e fare i commit con un messaggio sempre riferito alla card (se esiste)
-3. Prima di un commit è bene lanciare i test per la verifica del codice.
-Usare il comando `make unit-test` oppure entrare nel container `make cli`e da li lanciare `yarn test`
-4. Pusshare in remote il branch (*anche per un backup*)
-5. Per chiudere il progetto (*se si deve passare ad un'altro*) usare `make stop` oppure `docker-compose stop` per stoppare il docker
+3. Pusshare in remote il branch (*anche per un backup*)
+4. Per chiudere il progetto (*se si deve passare ad un'altro*) usare `make stop` oppure `docker-compose stop` per stoppare il docker
 
 **NOTA**: usare `docker-compose start` per attivare i container del progetto già inizializzati e buildati.
    
@@ -150,6 +145,7 @@ Questo file contiene una serie di script che possono essere utilizati per alcune
 Aiuta a creare "alias" di comandi.
 
 I comandi che troverete saranno:
+- `make init`: inizializza il progetto e il branch stage
 - `make all`: eseguirà una serire di comandi per inizializzare il progetto
 - `make up`: accende i docker per il progetto
 - `make cli`: attiva la shell del container docker
@@ -159,6 +155,10 @@ I comandi che troverete saranno:
 - `make stage-deploy`: istnaza le librerie necessari per lo sviluppo
 - `make build`: istanzia i docker necessari
 - `make check-env-file`:  verifica la presenza del env file
+- `make pull-dotenv`:  scarica il dotenv dal vault
+- `make push-dotenv`:  mette il dotenv nel vault
+- `make create-branch-feature BRANCH=<nome-brnach>`:  crea un branch partendo da stage e aumenta di una minor version il package.json
+- `make create-branch-fix BRANCH=<nome-brnach>`:  crea un branch partendo da stage e aumenta di una patch version il package.json
 
 ### Installare dipendenze/plugin/moduli
 Indipendentemente dal linguaggio (JS o PHP), per instalalre delel dipendenze, dovete sempre entrare nei container e da li lanciare i comandi.
@@ -209,8 +209,7 @@ L'organizzazione ha già molte chiavi di default che possono essere utilizzate, 
 
 **Come utilizzarli**
 - localmente 
-  - creare pure un file `.env`
-  - toglierlo dal GIT (usando gitignore)
+  - lanciare il comando `make init`
 - deploy in stage/prod
   - andare su GitHub e a livello di progetto o di organizzazione settare una secrets apposita (Settings > Secrets)
 
