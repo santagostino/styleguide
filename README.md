@@ -2,6 +2,8 @@
 
 L'obiettivo è dare alcune indicazioni su come poter lavorare con la nuova Developer platform di Santagostino.
 
+A [questo link](https://github.com/airbnb/javascrip) trovate invece una OTTIMA StyleGuide per la scrittura codice (prendete spunto, al Santagostion lo facciamo!)
+
 Daremo delle linee guida su:
 - flusso di lavoro
 - scrittura di commit e documentazione
