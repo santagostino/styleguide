@@ -228,6 +228,29 @@ Il vantaggio sarà quello di condividere tramite GIT le nostre chiamate e di ave
 
 **NOTA #2**: se le nostre API da testare utilizzano delle APIKEY sfruttare i file .env per inserire la chiave cosi rimarrà locale e non sarà pushata su git.
 
+## DoD tecnica
+Un progetto di sviluppo (grande o piccolo che sia) per noi è considerato finito quando:
+- DoD tecnica passata
+- DoD di progetto è passata
+- Pipelien di QA sono passate
+- Test di UAT sono passati
+
+Per DoD Tecnica definiamo quei punti che devono essere fatti sul progetto su cui si è lavorato (che sia un servizio nuovo o esistente).
+
+Qui sotto elenchiamo i punti che un DEV dovrebbe sempr efare in un progetto:
+- implementare/aggiornare test del codice
+- implementare/aggiornare swagger (usando sia fastify-swagger per progetti nodejs, o a mano)
+- implementare/aggiornare docs di flusso
+- aggiornare i packages se obsoleti o se identificati come alert di sicurezza da Dependbot di github (o simili)
+- avere nel git chiamate di test delel varie rotti (se necessarie) per poter permettere ad altri dev di mantenere il codice
+- implementare codice sempre con un'occhio a:
+  - sicurezza
+  - non creare dipendenza tra servizi e passare sempr edal middleware
+  - non rendere un servizio troppo grosso
+  - passare dal Cheif software architect per validare l'architettura Software e tecnologia da usare
+  - usare la coverage del codice per capire se devono essere coperte alcune aree del codice dai test (non è necessario avere una copertura al 100%, ma aver coperto quei punti più critici soprattuo quei punti che potrebbero subire molte modifiche)
+  - quando si implementa un codice nuovo rispettare la struttura degli starterkit e le regole delal styleguide
+
 ## Strumenti consigliati
 Alcuni strumenti che consigliamo per gestire al meglio un progetto
 - **ClickUP**: piattaforma per gestire TASK sfruttando le potenzialità di TRELLO e delle metodologie Kanban, Scrum
