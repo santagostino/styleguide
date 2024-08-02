@@ -269,7 +269,6 @@ Ci permette anche di essere cross-platform a costo zero
 - [Auto rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring)
 - [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
-- [Beautify blade](https://marketplace.visualstudio.com/items?itemName=apility.beautify-blade)
 - [Better comment](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 - [Code spell check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Italian code spell check](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-italian)
@@ -279,8 +278,6 @@ Ci permette anche di essere cross-platform a costo zero
 - [Editor config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [GIT Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-- [GIT History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-- [GIT Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens-insiders)
 - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
 - [Indent rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
@@ -306,7 +303,6 @@ Ci permette anche di essere cross-platform a costo zero
 
 ### Temi e icone e varie
 - [Material icon theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-- [Darcula Theme](https://marketplace.visualstudio.com/items?itemName=rokoroku.vscode-theme-darcula)
 - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 - [PDF](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
 - [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
